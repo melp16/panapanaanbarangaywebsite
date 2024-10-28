@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   background-color: #cfb8e7;
+   
+  
+  
+}
+
+#services ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+}
+
+
+header {
+    background: #0a496d; /* Red background color */
+    color: rgb(255, 255, 255); /* White text color */
+    padding: 30px 10px; /* Padding top/bottom and left/right */
+    text-align: center; /* Centered text */
+    width: 100%; /* Make the header take full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    margin: 0; /* Remove default margin */
+}   
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #f4e9e9;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #262626;
+    color: white;
+    width: 100%;
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Use fixed positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
+    background-color: #e7e2f4;
+    padding: 25px;
+    width: 600px; /* Fixed width for popup */
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#newsletterPopup.show {
+    display: block; /* Show the popup */
+    opacity: 1; /* Make it visible */
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-size: 1.3em;
+    margin: 12px 0 6px;
+}
+
+form input {
+    padding: 12px;
+    width: 85%;
+    border: 1px solid #f0e6e6;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+button {
+    background-color: #417a43;
+    color: #ffffff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3d7b40;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    min-height: 100vh; /* Ensure the content takes up the full height of the viewport */
+    text-align: center; /* Center text inside each section */
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: block; /* Make the image a block element */
+    margin: 20px auto; /* Center the image horizontally and add margin */
+    width: 100px; /* Set the desired width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links on smaller screens */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%; /* Make button full-width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    form input {
+        width: 100%; /* Full-width form input on small screens */
+    }
+
+    button {
+        padding: 12px 20px; /* Adjust button padding for smaller screens */
+    }
+}
